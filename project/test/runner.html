@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Jasmine Test Runner</title>
+  <link rel="stylesheet" href="lib/jasmine.css">
+  <script src="lib/jasmine.js"></script>
+  <script src="lib/jasmine-html.js"></script>
+
+  <script src="lib/console-runner.js"></script>
+
+  <!-- SOURCE FILES -->
+  <script src="example.js"></script>
+
+  <!-- TEST FILES -->
+  <script src="example_spec.js"></script>
+  <script src="example_spec-2.js"></script>
+</head>
+<body>
+  <script >
+    var console_reporter = new jasmine.ConsoleReporter()
+    jasmine.getEnv().addReporter(new jasmine.TrivialReporter());
+    jasmine.getEnv().addReporter(console_reporter);
+    jasmine.getEnv().execute();
+  </script>
+</body>
+</html>
+
