@@ -1,4 +1,4 @@
-install: install_node install_jshint install_yuiglify install_phantomjs
+install: install_node install_npm install_jshint install_yuiglify install_phantomjs install_sass
 
 install_node:
 	@brew install node
@@ -15,6 +15,9 @@ install_jshint:
 
 install_yuiglify:
 	@sudo npm install yuglify -g
+
+install_sass:
+	@gem install sass
 
 jshint:
 	@jshint project/src/js/*.js
