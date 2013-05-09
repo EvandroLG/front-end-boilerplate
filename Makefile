@@ -33,4 +33,4 @@ compress_css:
 	@yuglify -c project/src/css/default project/src/css/*.css
 
 watch_sass:
-	 sass --watch project/src/sass/.:project/src/css/
+	 @sass --watch project/src/sass/.:project/src/css/
