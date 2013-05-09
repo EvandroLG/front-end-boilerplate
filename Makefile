@@ -18,6 +18,7 @@ install_yuiglify:
 
 install_sass:
 	@gem install sass
+	@gem install compass
 
 jshint:
 	@jshint project/src/js/*.js
@@ -30,3 +31,6 @@ compress_js:
 
 compress_css:
 	@yuglify -c project/src/css/default project/src/css/*.css
+
+watch_sass:
+	 sass --watch project/src/sass/.:project/src/css/
